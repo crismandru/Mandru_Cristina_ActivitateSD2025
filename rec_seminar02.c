@@ -53,7 +53,7 @@ void dezalocare(struct Masina** vectorMasini, int* nrMasini) {
 	*nrMasini = 0;
 }
 
-void copiazaMasiniTonajMic(struct Masina* vectorMasini, char nrMasini, float prag, struct Masina** vectorNou, int* dimensiune) {
+void copiazaMasiniTonajMic(struct Masina* vectorMasini, int nrMasini, float prag, struct Masina** vectorNou, int* dimensiune) {
 	//parametrul prag poate fi modificat in functie de 
 	//tipul atributului ales pentru a indeplini o conditie
 	//este creat un nou vector cu elementele care indeplinesc acea conditie
@@ -64,15 +64,15 @@ void copiazaMasiniTonajMic(struct Masina* vectorMasini, char nrMasini, float pra
 			(*dimensiune)++;
 		}
 	}
-	(*vectorNou) = malloc(sizeof(struct Masina) * (*dimensiune));
+	(*vectorNou) = (struct Masina*)malloc(sizeof(struct Masina) * (*dimensiune));
 	int k = 0;
 	for (int i = 0; i < nrMasini; i++)
 	{
 		if (vectorMasini[i].tonaj < prag) {
 			(*vectorNou)[k] = vectorMasini[i];
 			//deep copy
-			(*vectorNou)[i].model = malloc(sizeof(char) * (strlen(vectorMasini[i].model) + 1));
-			strcpy_s((*vectorNou)[i].model, strlen(vectorMasini[i].model) + 1, vectorMasini[i].model);
+			(*vectorNou)[k].model = malloc(sizeof(char) * (strlen(vectorMasini[i].model) + 1));
+			strcpy_s((*vectorNou)[k].model, strlen(vectorMasini[i].model) + 1, vectorMasini[i].model);
 			k++;
 		}
 	}
@@ -108,11 +108,14 @@ int main() {
 	printf("\nMasini copiate: \n");
 	afisareVector(vectorMasiniCopiate, nrMasiniCopiate);
 
-	dezalocare(&vectorMasiniCopiate, &nrMasiniCopiate);
-
-	copiazaMasiniTonajMic(vectorMasiniCopiate, nrMasini, 7, &vectorMasiniCopiate, &nrMasiniCopiate);
+	struct Masina* vectorMasiniTonajMic = NULL;
+	int nrMasiniTonajMic = 0;
+	copiazaMasiniTonajMic(vectorMasiniCopiate, nrMasiniCopiate, 5, &vectorMasiniTonajMic, &nrMasiniTonajMic);
 	printf("\nMasini cu tonaj mic: \n");
-	afisareVector(vectorMasiniCopiate, nrMasiniCopiate);
+	afisareVector(vectorMasiniTonajMic, nrMasiniTonajMic);
+
+	dezalocare(&vectorMasiniCopiate, &nrMasiniCopiate);
+	dezalocare(&vectorMasiniTonajMic, &nrMasiniTonajMic);
 
 	return 0;
 }

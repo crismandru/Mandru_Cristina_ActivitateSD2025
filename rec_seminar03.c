@@ -22,7 +22,7 @@ void afisareMasina(Masina masina) {
 	printf("Pret: %.2f\n", masina.pret);
 	printf("Model: %s\n", masina.model);
 	printf("Nume sofer: %s\n", masina.numeSofer);
-	printf("Serie: %u\n", masina.serie);
+	printf("Serie: %c\n\n", masina.serie);
 }
 
 void afisareVectorMasini(Masina* masini, int nrMasini) {
@@ -50,20 +50,35 @@ void adaugaMasinaInVector(Masina** masini, int* nrMasini, Masina masinaNoua) {
 }
 
 Masina citireMasinaFisier(FILE* file) {
-	//functia citeste o masina dintr-un strceam deja deschis
-	//masina citita este returnata;
 	Masina masina;
 	char buffer[100];
 	char separator[] = ",\n";
-	fgets(buffer, 100, file);
-	masina.id = atoi(strtok(buffer, separator));
-	masina.nrUsi = atoi(strtok(NULL, separator));
-	masina.pret = atoi(strtok(NULL, separator));
-	masina.model = malloc(sizeof(char) * (strlen(strtok(buffer, separator)) + 1));
-	strcpy_s(masina.model, strlen(strtok(NULL, separator)) + 1, strtok(NULL, separator));
-	masina.numeSofer = malloc(sizeof(char) * (strlen(strtok(buffer, separator)) + 1));
-	strcpy_s(masina.numeSofer, strlen(strtok(NULL, separator)) + 1, strtok(NULL, separator));
-	masina.serie = atoi(strtok(NULL, separator));
+
+	if (fgets(buffer, 100, file) == NULL) {
+		masina.id = -1; 
+		return masina;
+	}
+
+	char* token = strtok(buffer, separator);
+	masina.id = atoi(token);
+
+	token = strtok(NULL, separator);
+	masina.nrUsi = atoi(token);
+
+	token = strtok(NULL, separator);
+	masina.pret = atof(token); 
+
+	token = strtok(NULL, separator);
+	masina.model = malloc(strlen(token) + 1);
+	strcpy(masina.model, token);
+
+	token = strtok(NULL, separator);
+	masina.numeSofer = malloc(strlen(token) + 1);
+	strcpy(masina.numeSofer, token);
+
+	token = strtok(NULL, separator);
+	masina.serie = token[0];
+
 	return masina;
 }
 

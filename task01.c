@@ -71,6 +71,11 @@ void modificaNumeCampionat(struct Campionat* c, const char* numeNou) {
 	strcpy_s(c->nume, strlen(numeNou) + 1, numeNou);
 }
 
+void eliberareMemorie(struct Campionat* c) {
+	free(c->tara);
+	free(c->nume);
+}
+
 int main() {
 	struct Campionat c1, c2, c3;
 	c1 = initializare(1, "Romania", "Liga 1", 16, 468);
@@ -91,6 +96,11 @@ int main() {
 	calculeazaMedieJucatoriEchipa(c2);
 	calculeazaMedieJucatoriEchipa(c3);
 	calculeazaMedieJucatoriEchipa(c4);
+
+	eliberareMemorie(&c1);
+	eliberareMemorie(&c2);
+	eliberareMemorie(&c3);
+	eliberareMemorie(&c4);
 
 	return 0;
 }

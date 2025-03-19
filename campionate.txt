@@ -1,0 +1,10 @@
+1,Romania,Liga 1,16,468
+2,Romania,Liga 2,22,573
+3,Germania,Bundesliga,18,508
+4,Spania,La Liga,20,530
+5,Spania,La Liga 2,22,546
+6,Anglia,Premier League,20,540
+7,Anglia,EFL Championship,26,552
+8,Anglia,EFL League One,24,640
+9,Anglia,EFL League Two,24,662
+10,Franta,Ligue 1,18,472

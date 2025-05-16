@@ -18,5 +18,61 @@
     <ClCompile Include="rec_seminar02.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rec_seminar03.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task01.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task02.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rec_seminar04.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task03.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task05.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rec_seminar05.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task04.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rec_seminar06.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="task06.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Moneda.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MonedaDubla.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BancaSimpla.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rec_seminar07.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="rec_seminar08.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="campionate.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="campionat_adaugat.txt">
+      <Filter>Source Files</Filter>
+    </Text>
+    <Text Include="campionate_adaugate.txt">
+      <Filter>Source Files</Filter>
+    </Text>
   </ItemGroup>
 </Project>

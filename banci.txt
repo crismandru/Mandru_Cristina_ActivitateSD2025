@@ -1,0 +1,5 @@
+Transilvania,5,30
+Romaneasca,10,40
+BCR,15,35
+ING,8,50
+Libra,14,25

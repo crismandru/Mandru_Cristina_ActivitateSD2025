@@ -127,7 +127,27 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BancaSimpla.c" />
+    <ClCompile Include="Moneda.c" />
+    <ClCompile Include="MonedaDubla.c" />
     <ClCompile Include="rec_seminar02.c" />
+    <ClCompile Include="rec_seminar03.c" />
+    <ClCompile Include="rec_seminar04.c" />
+    <ClCompile Include="rec_seminar05.c" />
+    <ClCompile Include="rec_seminar06.c" />
+    <ClCompile Include="rec_seminar07.c" />
+    <ClCompile Include="rec_seminar08.c" />
+    <ClCompile Include="task01.c" />
+    <ClCompile Include="task02.c" />
+    <ClCompile Include="task03.c" />
+    <ClCompile Include="task04.c" />
+    <ClCompile Include="task05.c" />
+    <ClCompile Include="task06.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="campionate.txt" />
+    <Text Include="campionate_adaugate.txt" />
+    <Text Include="campionat_adaugat.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

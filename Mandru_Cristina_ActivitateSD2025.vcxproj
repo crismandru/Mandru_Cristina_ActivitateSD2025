@@ -137,6 +137,7 @@
     <ClCompile Include="rec_seminar06.c" />
     <ClCompile Include="rec_seminar07.c" />
     <ClCompile Include="rec_seminar08.c" />
+    <ClCompile Include="rec_seminar10.c" />
     <ClCompile Include="task01.c" />
     <ClCompile Include="task02.c" />
     <ClCompile Include="task03.c" />

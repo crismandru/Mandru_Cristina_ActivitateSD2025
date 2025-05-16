@@ -63,6 +63,9 @@
     <ClCompile Include="rec_seminar08.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="rec_seminar10.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Text Include="campionate.txt">

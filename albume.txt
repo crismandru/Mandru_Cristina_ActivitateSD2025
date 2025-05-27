@@ -1,0 +1,8 @@
+1,Artpop,Lady Gaga,60.5,14,A
+2,Born This Way,Lady Gaga,62.3,17,A
+3,Chromatica,Lady Gaga,43.2,16,B
+4,Hold The Girl,Rina Sawayama,46.7,13,A
+5,SAWAYAMA,Rina Sawayama,44.9,12,A
+6,Lucid Dreams,Rina Sawayama,39.5,10,B
+7,Apa,Oscar,52.0,11,B
+8,Stefan IV,Oscar,47.8,9,C

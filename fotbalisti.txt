@@ -1,0 +1,5 @@
+1,Cristi Tanase,4000.50
+2,Teo Stanciu,5000.05
+3,Maria Popa,4500.45
+4,Cris Mandru,5555.55
+5,Zinedine Zidane,100.45
